@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tomato Leaf Disease Classification</title>
+</head>
+<body>
+    <h1>Upload an image for classification</h1>
+    <form action="/predict" method="POST" enctype="multipart/form-data">
+        <label for="file">Choose an image to upload:</label>
+        <input type="file" name="file" id="file" required>
+        <button type="submit">Predict</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        // Handle form submission with JavaScript (AJAX)
+        const form = document.querySelector('form');
+        form.onsubmit = async (e) => {
+            e.preventDefault();  // Prevent the default form submission
+            const formData = new FormData(form);
+
+            try {
+                const response = await fetch('/predict', {
+                    method: 'POST',
+                    body: formData
+                });
+                const data = await response.json();
+
+                // Handle response from Flask backend
+                if (data.top_predictions) {
+                    let resultText = 'Predictions:<br>';
+                    data.top_predictions.forEach(prediction => {
+                        resultText += `${prediction.label}: ${prediction.confidence.toFixed(4)}<br>`;
+                    });
+                    document.getElementById('result').innerHTML = resultText;
+                } else {
+                    document.getElementById('result').innerHTML = 'Error: ' + data.error;
+                }
+            } catch (error) {
+                document.getElementById('result').innerHTML = 'Error: ' + error;
+            }
+        };
+    </script>
+</body>
+</html>
