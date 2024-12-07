@@ -21,7 +21,7 @@ This guide explains how to download and set up the required model for this proje
 3. **Place the Model File**  
    - Move the downloaded model file into the following directory:  
      ```
-     [Your Project Directory]/
+     [Your Project Directory]/model/
      ```  
 
    Ensure the file is placed in the **specified folder** for the project to work as expected.
