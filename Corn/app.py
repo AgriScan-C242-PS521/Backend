@@ -10,7 +10,7 @@ app = Flask(__name__)
 CORS(app)  # Allow cross-origin requests
 
 # Load your trained model
-model = load_model("model/jagungh5.h5")
+model = load_model("model/model.h5")
 
 # Labels for the model predictions
 labels = [
