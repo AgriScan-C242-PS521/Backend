@@ -1,4 +1,4 @@
-# Model Setup Instructions
+# Tomato Model Setup Instructions
 
 This guide explains how to download and set up the required model for this project.  
 
