@@ -11,7 +11,7 @@ This guide explains how to download and set up the required model for this proje
 
 1. **Download the Model**  
    - Click the following link to download the model file:  
-     [Download Model]([https://drive.google.com/file/d/1FMc3VgxUOLFTTyOssKnuA0svQq2tZtJ4/view](https://drive.google.com/file/d/1-TsX2-ChfIfSdeZG2abnMS68jp1DQd35/view?usp=sharing))  
+     [Download Model](https://drive.google.com/file/d/1-TsX2-ChfIfSdeZG2abnMS68jp1DQd35/view?usp=sharing)  
    - Once redirected to Google Drive, click the **Download** button to save the file locally.
 
 2. **Locate the Downloaded File**  
